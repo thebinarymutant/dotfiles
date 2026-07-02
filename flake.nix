@@ -94,6 +94,11 @@
       flake = false;
     };
 
+    surge-downloader-tap = {
+      url = "github:surge-downloader/homebrew-tap";
+      flake = false;
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       # IMPORTANT: we're using "libgbm" and is only available in unstable so ensure
@@ -127,6 +132,7 @@
     anomalyco-tap,
     modemdev-tap,
     jnsahaj-lumen-tap,
+    surge-downloader-tap,
     nix4vscode,
     ...
   } @ inputs: let
@@ -267,6 +273,7 @@
                 "anomalyco/homebrew-tap" = anomalyco-tap;
                 "modem-dev/homebrew-tap" = modemdev-tap;
                 "jnsahaj/homebrew-lumen" = jnsahaj-lumen-tap;
+                "surge-downloader/tap" = surge-downloader-tap;
               };
               mutableTaps = true;
             };

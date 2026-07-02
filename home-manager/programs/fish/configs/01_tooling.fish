@@ -39,6 +39,10 @@ set -gx NDK_HOME $ANDROID_NDK_ROOT/29.0.14206865
 # suppress greeting
 set fish_greeting
 
+# llama.cpp
+set -gx LLAMA_CACHE "$HOME/llama_cache"
+set -gx LLAMA_PORT 58721
+
 starship init fish | source
 atuin init fish | source
 

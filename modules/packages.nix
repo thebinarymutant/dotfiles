@@ -27,6 +27,7 @@
     hyperfine # Command-line benchmarking tool
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.home-manager
     jujutsu # Git-compatible DVCS
+    llama-cpp # High-performance LLM inference
     just # Handy way to save and run project-specific commands
     # lapce # Lightning-fast and Powerful Code Editor written in Rust
     lefthook # Fast and powerful Git hooks manager for any type of projects

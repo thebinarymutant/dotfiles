@@ -30,6 +30,8 @@ with lib; {
     HOMEBREW_NO_EMOJI = "1";
     MISE_NODE_COREPACK = "true";
     VERCEL_TELEMETRY_DISABLED = "1";
+    LLAMA_CACHE = "/Users/${userConfig.userName}/llama_cache";
+    LLAMA_PORT = "58721";
   };
 
   home-manager.backupFileExtension = "bak";

@@ -6,6 +6,7 @@
   imports = [
     ./chromium-extensions.nix
     ./homebrew.nix
+    ./llama-server.nix
   ];
 
   ids.gids.nixbld = 350;
@@ -44,7 +45,6 @@
         # {app = "/Applications/Firefox Developer Edition.app";}
         {app = "/Applications/Microsoft Edge.app";}
         {app = "/Users/${userConfig.userName}/Applications/Home Manager Apps/Zen Browser (Beta).app";}
-        {app = "/Applications/LM Studio.app";}
         {app = "/Applications/Docker.app";}
         {app = "/Applications/Alacritty.app";}
         {app = "/Applications/WezTerm.app";}

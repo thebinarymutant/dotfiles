@@ -1,0 +1,18 @@
+{
+  "providers": {
+    "llamacpp": {
+      "baseUrl": "http://127.0.0.1:58721/v1",
+      "api": "openai-completions",
+      "apiKey": "not-needed",
+      "models": [
+        {
+          "id": "qwen3.6-mtp"
+        }
+      ],
+      "compat": {
+        "supportsDeveloperRole": false,
+        "supportsReasoningEffort": false
+      }
+    }
+  }
+}

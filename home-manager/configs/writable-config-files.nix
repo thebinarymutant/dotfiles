@@ -9,6 +9,22 @@
       target = ".config/jj/config.toml";
       source = ./jujutsu/config.toml;
     }
+    {
+      target = ".pi/agent/models.json";
+      source = ./pi/models.json;
+    }
+    {
+      target = ".pi/agent/settings.json";
+      source = ./pi/settings.json;
+    }
+    {
+      target = ".config/opencode/opencode.json";
+      source = ./opencode/opencode.json;
+    }
+    {
+      target = ".hermes/config.yaml";
+      source = ./hermes/config.yaml;
+    }
   ];
 
   installWritableConfig = {
