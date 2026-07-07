@@ -7,10 +7,12 @@
   imports = [
     inputs.catppuccin.homeModules.catppuccin
     ../programs/fish.nix
+    ../programs/shells.nix
     ../programs/git.nix
     ../programs/tealdeer.nix
     ../configs/writable-config-files.nix
     ../configs/mise-config.nix
+    ../configs/shell-env.nix
   ];
 
   catppuccin = {
@@ -55,5 +57,5 @@
     };
   };
 
-  systemd.user.startServices = lib.mkIf pkgs.stdenv.isLinux "sd-switch";
+  systemd.user.startServices = lib.mkIf pkgs.stdenv.hostPlatform.isLinux "sd-switch";
 }

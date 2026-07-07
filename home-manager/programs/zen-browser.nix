@@ -50,11 +50,11 @@ in {
   # after rebuilds, and Home Manager's declarative profiles.ini is read-only,
   # which can make Zen try to create a new inaccessible profile. Use the normal
   # profiles.ini default instead.
-  home.sessionVariables = lib.mkIf pkgs.stdenv.isDarwin {
+  home.sessionVariables = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
     MOZ_LEGACY_PROFILES = "1";
   };
 
-  launchd.agents.moz-legacy-profiles = lib.mkIf pkgs.stdenv.isDarwin {
+  launchd.agents.moz-legacy-profiles = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
     enable = true;
     config = {
       ProgramArguments = ["/bin/launchctl" "setenv" "MOZ_LEGACY_PROFILES" "1"];
@@ -65,7 +65,7 @@ in {
   # Keep macOS Zen's install-specific profile lock in sync with the declarative
   # Home Manager profile as a fallback for launches that do not inherit the
   # launchd environment above.
-  home.file."Library/Application Support/Zen/installs.ini" = lib.mkIf pkgs.stdenv.isDarwin {
+  home.file."Library/Application Support/Zen/installs.ini" = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
     text = ''
       [A63691297E687233]
       Default=Profiles/default

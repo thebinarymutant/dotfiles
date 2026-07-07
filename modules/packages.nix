@@ -25,6 +25,7 @@
     go
     hoppscotch # Open source API development ecosystem
     hyperfine # Command-line benchmarking tool
+    inputs.herdr-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.home-manager.packages.${pkgs.stdenv.hostPlatform.system}.home-manager
     jujutsu # Git-compatible DVCS
     llama-cpp # High-performance LLM inference

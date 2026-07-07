@@ -112,6 +112,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    herdr-nix.url = "github:herdrdev/herdr-nix";
+
     # rust-overlay = {
     #   url = "github:oxalica/rust-overlay";
     #   inputs.nixpkgs.follows = "nixpkgs";

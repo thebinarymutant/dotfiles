@@ -42,8 +42,13 @@
       "alacritty"
       "antigravity"
       "brave-browser"
-      "cursor"
-      "cursor-cli"
+      # cursor / cursor-cli — commented out because the Homebrew cask tries to set
+      # kMDItemAlternateNames xattr on a binary inside Cursor.app. Once macOS TCC
+      # grants privacy perms to Cursor, com.apple.macl locks all xattr writes (even
+      # as root). brew treats the failure as fatal and rolls back the install.
+      # See: https://forum.cursor.com/t/cursor-couldnt-finish-installing/162469/16
+      # "cursor"
+      # "cursor-cli"
       "codex"
       "codex-app"
       "discord"
@@ -53,10 +58,12 @@
       "flying-carpet"
       "gitbutler"
       "google-chrome"
+      "handy"
       "helium-browser"
       "marta"
       "microsoft-edge"
       "opencode-desktop"
+      "open-design"
       "paper-design"
       "surge-downloader/tap/surge"
       "raycast"

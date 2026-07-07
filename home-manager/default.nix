@@ -8,7 +8,7 @@
   ...
 }: let
   homeDirectory =
-    if pkgs.stdenv.isDarwin
+    if pkgs.stdenv.hostPlatform.isDarwin
     then "/Users/${userConfig.userName}"
     else "/home/${userConfig.userName}";
 

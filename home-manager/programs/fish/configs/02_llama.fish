@@ -1,7 +1,3 @@
-# llama.cpp — local Qwen3.6 MTP server
-set -gx LLAMA_CACHE "$HOME/llama_cache"
-set -gx LLAMA_PORT 58721
-
 function llama-start
     launchctl kickstart -k "gui/$UID/local.llama-server"
 end

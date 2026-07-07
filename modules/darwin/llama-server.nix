@@ -7,7 +7,7 @@
   home = "/Users/${userConfig.userName}";
   port = "58721";
 in {
-  launchd.daemons.llama-server = lib.mkIf pkgs.stdenv.isDarwin {
+  launchd.daemons.llama-server = lib.mkIf pkgs.stdenv.hostPlatform.isDarwin {
     environment = {
       LLAMA_CACHE = "${home}/llama_cache";
     };

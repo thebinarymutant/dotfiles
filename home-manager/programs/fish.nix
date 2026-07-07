@@ -1,6 +1,6 @@
 {pkgs, ...}: let
   codeFunction =
-    if pkgs.stdenv.isDarwin
+    if pkgs.stdenv.hostPlatform.isDarwin
     then ''
       if test -d "$argv[1]" -o -f "$argv[1]"
           open -a "Visual Studio Code" "$argv[1]"
